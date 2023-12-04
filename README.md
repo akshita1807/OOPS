@@ -32,9 +32,59 @@ also if one value is needed to be fixed
 
 function can have default arguments from trailing
 
-int mul(int i,int j=5,int k=6); **---true**
-int mul(int i=5,int j);  **--false**
-int mul(int i=5,int j,int k=10); **--false**
-int mul(int i=5,int j=6,int k=8); **--true**
+int mul(int i,int j=5,int k=6); **---true**  
+int mul(int i=5,int j);  **--false**  
+int mul(int i=5,int j,int k=10); **--false**  
+int mul(int i=5,int j=6,int k=8); **--true**  
+
+
+# Constructor
+is a special method which is called automatically when an object of a class is created.It takes the same name as the class.It does not have any return value
+
+```class anyname{
+public:
+anyname(){
+cout<<"Hey"<<endl;
+  }
+}
+```
+
+
+# Constructors
+can also take parameters (just like regular functions), which can be useful for setting initial values for attributes.
+
+**Type of constructors**
+default,parameterized,copy constructor
+
+Constructors can also be defined outside the class--using scope resolution operator ::
+
+```class Car {        // The class
+  public:          // Access specifier
+    string brand;  // Attribute
+     
+    int year;      // Attribute
+    Car(string x, int z); // Constructor declaration with parameters
+};
+
+
+// Constructor definition outside the class
+Car::Car(string x, int z) {
+  brand = x;
+ 
+  year = z;
+}
+
+int main() {
+  // Create Car objects and call the constructor with different values
+  Car carObj1("BMW", 1999);
+  Car carObj2("Ford", 1969);
+
+  // Print values
+  cout << carObj1.brand << " " << carObj1.year;
+  cout << carObj2.brand << " " << carObj2.year;
+  return 0;
+}
+```
+
 
 
