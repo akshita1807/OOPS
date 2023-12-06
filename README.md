@@ -409,7 +409,7 @@ function which is present outside the class but it can access provate and protec
 A class which has at least one pure virtual function.We can't make object of the abstract class.We can access it's memeber function using pointer or reference variable.
 
 
-``class A{
+```class A{
 public:
 virtual void show()=0; //pure virtual function
 }
