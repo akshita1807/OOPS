@@ -275,3 +275,247 @@ int main() {
 If you are a user, and you have a problem statement, you don't want to know how the components of the software work, or how it's made. You only want to know how the software solves your problem. Abstraction is the method of hiding unnecessary details from the necessary ones. It is one of the main features of OOPs. 
 For example, consider a car. You only need to know how to run a car, and not how the wires are connected inside it. This is obtained using Abstraction
 
+# Polymorphism
+poly(many) morphs(shapes)
+A real-life example of polymorphism is a person who at the same time can have different characteristics. A man at the same time is a father, a husband, and an employee. So the same person exhibits different behavior in different situations. This is called polymorphism
+
+**Polymorphism refers to the process by which some code, data, method, or object behaves differently under different circumstances or contexts**
+
+**Compile time polymorphism**
+(This type of polymorphism is achieved by function overloading or operator overloading.)
+
+**function overloading**=When there are multiple functions with the same name but different parameters, then the functions are said to be overloaded, hence this is known as Function Overloading. Functions can be overloaded by changing the number of arguments or/and changing the type of arguments. 
+
+**operator overloading**=C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading. For example, we can make use of the addition operator (+) for string class to concatenate two strings. We know that the task of this operator is to add two operands. So a single operator ‘+’, when placed between integer operands, adds them and when placed between string operands, concatenates them. 
+
+Compile time polymorphism, also known as Static Polymorphism, refers to the type of Polymorphism that happens at compile time. What it means is that the compiler decides what shape or value has to be taken by the entity in the picture.
+
+```#include <iostream>
+
+class CompileTimePolymorphism {
+public:
+    // 1st method with name add
+    int add(int x, int y) {
+        return x + y;
+    }
+
+    // 2nd method with name add
+    int add(int x, int y, int z) {
+        return x + y + z;
+    }
+
+};
+
+int main() {
+    CompileTimePolymorphism demo;
+    
+    // In the below statement, the Compiler looks at the argument types and decides to call method 1
+    cout << demo.add(2, 3) << endl;
+    
+    // Similarly, in the below statement, the compiler calls method 2
+    cout << demo.add(2, 3, 4) <<endl;
+    
+    return 0;
+}
+```
+
+The compiler looks at the method signature and decides which method to invoke for a particular method call at compile time.
+
+
+**Run time polymorphism**=Runtime polymorphism, also known as Dynamic Polymorphism, refers to the type of Polymorphism that happens at the run time.This type of polymorphism is achieved by virtual functions and Function Overriding.
+In runtime polymorphism, the compiler resolves the object at run time and then it decides which function call should be associated with that object.
+
+**function overriding**=takes place when your derived class and base class both contain a function having the same name. Along with the same name, both the functions should have the same number of arguments as well as the same return type.For function overriding, inheritance is a must. It can only happen in a derived class.
+//runtime ke wqt hi pta lgtahai ki base class ka function call hoga ya derived class ka isloye isko run time polymorphism bolte
+
+
+```#include <iostream>
+
+using namespace std;
+
+// define a base class
+
+class bird
+
+{
+
+   public:
+
+   // display function of the base class
+
+   void display()
+
+   {
+
+      cout << "I am the display function of the base class";
+
+   }
+
+};
+
+class parrot:public bird
+
+{
+
+   public:
+
+   // display function of the derived class
+
+    void display() 
+
+   {
+
+      cout << "I am the display function of the derived class";
+
+    
+
+   }
+
+};
+
+int main()
+
+{
+
+   // create objects of base and child classes 
+
+   bird b;
+
+   parrot p;
+
+   // call the diplay() function
+
+   b.display();
+
+   p.display();
+
+}
+```
+
+
+Virtual Functions=A virtual function is a form of a member function declared within a base class and redefined by a derived class. The keyword virtual is used to create a virtual function, preceding the function's declaration in the base class.
+
+
+when we use the same function name both in base and derived class the function in base class is declared as virtual 
+virtual function is accessed by a pointer to the base class
+Pure-virtual Functions with no defination.Starts with virtual keyword and end with =0.
+
+
+
+# Friend Function
+function which is present outside the class but it can access provate and protected members of the class
+
+# Abstract Class
+A class which has at least one pure virtual function.We can't make object of the abstract class.We can access it's memeber function using pointer or reference variable.
+
+
+``class A{
+public:
+virtual void show()=0; //pure virtual function
+}
+```
+
+
+# Interface
+An interface is a contract between itself and any class that implements it. Interface can have methods, properties, or events. It contains only declaration of its members and implementation of its members will be given by the class who implements the interface. Interface makes it easy to maintain the program. Following are the specified terms of interface.
+An interface can be defined by using interface keyword.
+Interface can’t have private members.
+
+``Syntax of interface declaration:
+interface Interfacename{
+//declare properties
+//declare methods
+}
+
+Syntax of implementing interface:
+class className:Interfacename{
+//code
+}
+```
+
+**Difference between struct and class?**
+by default members of a class are private,that of struct are public.
+
+# exception handling
+used to catch errors-like syntax errors
+three keywords=try,throw,catch
+
+try{//detects error
+throw exception;//if exception is detected it is thrown by throe keyword
+}
+
+catch{//catches and handles exception
+
+}
+
+cout<<"end";//final statement i.e executed irrespective of try catch
+
+
+
+
+# imp que
+```class A {
+    A() {
+        // Constructor code for class A
+    }
+}
+
+class B extends A {
+    B() {
+        // Constructor code for class B
+    }
+}
+
+class C extends B {
+    C() {
+        // Constructor code for class C
+    }
+}
+
+
+order of constructors getting called
+
+-A
+-B
+-C
+
+order of destructors getting called
+
+-C
+-B
+-A
+```
+
+item *ptr=new item[10];
+creates memory space for an array of 10 items
+
+
+# Types of variables
+
+**ordinary variable**
+int x=5;
+
+**pointer variable**
+int *p;
+p=&x;
+p is used to store address of x.for eg x has a value 5 and is stored at block 1000,p will give 100
+
+**reference variable**
+
+int &y=x;
+
+y++ krne se x ki value increase hogi kyonki y now reprresents x
+
+
+**Dynamic Memory Allocation
+The mechanism by which storage/memory/cells can be allocated to variables during the run time is called Dynamic Memory Allocation.It allocates the memory during the run time which enables us to use as much storage as we want, without worrying about any wastage.
+
+**Final Keyword**
+can be applied to class,methods and variables.
+Final class=A final class is a class that can not be subclassed.It prevents other classes from extending it and inheriting its behaviour.
+A final method=can not be overridden
+A final variable=can not be reassigned after its initial assignment
+
+**static variable/data member** static variables maintain their value until the end of the program. It is initialized just once 
+// Declare a static variable.
+    static int temp = 0;
