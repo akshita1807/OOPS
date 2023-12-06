@@ -421,7 +421,7 @@ An interface is a contract between itself and any class that implements it. Inte
 An interface can be defined by using interface keyword.
 Interface can’t have private members.
 
-``Syntax of interface declaration:
+```Syntax of interface declaration:
 interface Interfacename{
 //declare properties
 //declare methods
@@ -440,7 +440,7 @@ by default members of a class are private,that of struct are public.
 used to catch errors-like syntax errors
 three keywords=try,throw,catch
 
-try{//detects error
+```try{//detects error
 throw exception;//if exception is detected it is thrown by throe keyword
 }
 
@@ -449,8 +449,7 @@ catch{//catches and handles exception
 }
 
 cout<<"end";//final statement i.e executed irrespective of try catch
-
-
+```
 
 
 # imp que
@@ -507,7 +506,7 @@ int &y=x;
 y++ krne se x ki value increase hogi kyonki y now reprresents x
 
 
-**Dynamic Memory Allocation
+**Dynamic Memory Allocation**
 The mechanism by which storage/memory/cells can be allocated to variables during the run time is called Dynamic Memory Allocation.It allocates the memory during the run time which enables us to use as much storage as we want, without worrying about any wastage.
 
 **Final Keyword**
