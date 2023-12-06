@@ -84,6 +84,194 @@ int main() {
   return 0;
 }
 ```
+# scope resolution operator ::
+-used for namespace  
+-defining a function outside the class  
+-to access a global variable when there is local variable with same name
 
 
+
+# Access Specifiers
+define how members(method and attributes)of a class can be accessed  
+**public** - members are accessible from outside the class  
+**private** - members cannot be accessed (or viewed) from outside the class  
+**protected** - members cannot be accessed from outside the class, however, they can be accessed in inherited classes  
+
+
+**By default, all members of a class are private if you don't specify an access specifier**
+
+# Features of OOPS
+# Encapsulation
+is to make sure that "sensitive" data is hidden from users.To achieve this, you must declare class variables/attributes as private.If you want others to read or modify the value of a private member, you can provide public get and set methods.  
+It allows us to bind data and functions of a class in a single unit which is done to protect data and functions from external misuse providing security. A class is the best example of encapsulation.
+
+```#include <iostream>
+using namespace std;
+
+class Employee {
+  private:
+    // Private attribute
+    int salary;
+
+  public:
+    // Setter
+    void setSalary(int s) {
+      salary = s;
+    }
+    // Getter
+    int getSalary() {
+      return salary;
+    }
+};
+
+int main() {
+  Employee myObj;
+  myObj.setSalary(50000);
+  cout << myObj.getSalary();
+  return 0;
+}
+```
+
+By Encapsulation, all the necessary data and methods are bind together and all the unnecessary details are hidden to the normal user. So Encapsulation is the process of binding data members and methods of a program together to do a specific job, without revealing unnecessary details.  
+Encapsulation can also be defined in two different ways:  
+
+**Data hiding**: Encapsulation is the process of hiding unwanted information, such as restricting access to any member of an object.  
+**Data binding**: Encapsulation is the process of binding the data members and the methods together as a whole, as a class.  
+getter and setter are used to read and modify private member of a class.  
+
+
+# inheritance
+is to inherit methods and attributes form one class to other
+It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.
+
+**base/parent class**-from which the child class is inherited
+**derived/child class**-class which is inherited from other class
+
+```#include <iostream>
+#include <string>
+using namespace std;
+
+// Base class
+class Vehicle {
+  public: 
+    string brand = "Ford";//attribute of base class
+    void honk() {
+      cout << "Tuut, tuut! \n" ;//method of base class
+    }
+};
+
+// Derived class
+class Car: public Vehicle {
+  public: 
+    string model = "Mustang";
+};
+
+int main() {
+  Car myCar;//derived class ka object
+  myCar.honk();
+  cout << myCar.brand + " " + myCar.model;
+  return 0;
+//derived class ke object ke through hum parent class ke method and attribute access kr paa rhe
+  
+}
+```
+**Type of inheritance-single,multiple,multilevel,hybrid**  
+
+**single** ek parent se ek base class inherit ki ho
+
+**Multilevel** A class can also be derived from one class, which is already derived from another class.
+
+```// Base class (parent)
+class MyClass {
+  public:
+    void myFunction() {
+      cout << "Some content in parent class." ;
+    }
+};
+
+// Derived class (child)
+class MyChild: public MyClass {
+};
+
+// Derived class (grandchild)
+class MyGrandChild: public MyChild {
+};
+
+int main() {
+  MyGrandChild myObj;
+  myObj.myFunction();
+  return 0;
+}
+```
+
+
+**multiple** a class can also be derived from more than one class using comma
+
+```class vehicle{//first base class
+public:
+void myfun(){
+cout<<"Prent class"<<endl;
+  }
+}
+
+
+class vehicle2{//second base class
+public:
+void myfun2(){
+cout<<"also parent class"<<endl;
+ }
+}
+
+class childvehicle:public vehicle,public vehicle2{//childvehicle is inheriting methods and attributes both from vehicle and vehicle2
+};
+
+int main() {
+  childvehicle myObj;
+  myObj.myfun();
+  myObj.myfun2();
+  return 0;
+}
+```
+
+
+# diamond problem
+It occurs when a class inherits from two or more classes that have a common ancestor. This common ancestor can lead to ambiguity because grandchild class will inherit menber of grandparent class from both parents.leads to duplication of data.
+
+solution to this is=
+make both parent class as virtual class .it will make ensure that content of grandparent class is present only once in grandchild
+
+```class A {
+public:
+    virtual void method() {
+        cout << "A method" << endl;
+    }
+};
+
+class B : virtual public A {
+public:
+    void method() {
+        cout << "B method" << endl;
+    }
+};
+
+class C : virtual public A {
+public:
+    void method() {
+        cout << "C method" << endl;
+    }
+};
+
+class D : public B, public C {
+};
+
+int main() {
+    D d;
+    d.method(); // Calls D's method, which overrides A's method
+    return 0;
+}
+```
+
+# Abstraction 
+If you are a user, and you have a problem statement, you don't want to know how the components of the software work, or how it's made. You only want to know how the software solves your problem. Abstraction is the method of hiding unnecessary details from the necessary ones. It is one of the main features of OOPs. 
+For example, consider a car. You only need to know how to run a car, and not how the wires are connected inside it. This is obtained using Abstraction
 
