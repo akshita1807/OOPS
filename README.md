@@ -3,7 +3,7 @@
 **Object oriented programming** enhances the readibility and maintainability of the code.In OOPS the whole code revolves around objects and classes.
 
 # Class
-blueprint or template on behalf of which object can be created
+A class is a blueprint or template on behalf of which object can be created.A class may contain private as well as public parts.By default,all items defined in a class are private.
 
 # Object
 instance of the class
@@ -84,6 +84,11 @@ int main() {
   return 0;
 }
 ```
+
+# Destructor
+It is complement of destructor.It automatically gets called when object of a class is destroyed.It deallocates the memory which was previously allocated to thr object.
+It has same name as od class but preceded by ~.
+
 # scope resolution operator ::
 -used for namespace  
 -defining a function outside the class  
@@ -99,6 +104,26 @@ define how members(method and attributes)of a class can be accessed
 
 
 **By default, all members of a class are private if you don't specify an access specifier**
+
+# Structures
+A struct is similar to a class, but with default public access.
+
+```
+#include <iostream>
+using namespace std;
+
+// A structure declartion defines a class type
+struct Person {
+    // Public members
+    string name;
+    int age;
+    float height;
+};
+```
+
+
+**Difference between struct and class?**
+By default members of a class are private,that of struct are public.
 
 # Features of OOPS
 # Encapsulation
@@ -203,7 +228,7 @@ int main() {
   return 0;
 }
 ```
-
+**using public for inheritance means all the public members of the base class will become public members of the derived class.**
 
 **multiple** a class can also be derived from more than one class using comma
 
@@ -433,8 +458,7 @@ class className:Interfacename{
 }
 ```
 
-**Difference between struct and class?**
-by default members of a class are private,that of struct are public.
+
 
 # exception handling
 used to catch errors-like syntax errors
