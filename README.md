@@ -1,4 +1,4 @@
-# OOPS-Last minute revision notes✅
+# OOPS-Last minute Revision notes✅
 
 **Object oriented programming** enhances the readibility and maintainability of the code.In OOPS the whole code revolves around objects and classes.
 
@@ -6,10 +6,10 @@
 A class is a blueprint or template on behalf of which object can be created.A class may contain private as well as public parts.By default,all items defined in a class are private.
 
 # Object
-instance of the class
+An object is an instance of the class
 
 For eg:
-class hai=fruits toh object hoga =apple,mango,banana method hoga =eat,wash,cut(these methods are basically the functions)  attribute hoga=taste ,color
+class hai=fruits toh object hoga =apple🍎,mango🥭,banana🍌 method hoga =eat,wash,cut(these methods are basically the functions)  attribute hoga=taste ,color
 
 **A class can exist without an object, but an object cannot exist without a class.**
 
@@ -53,7 +53,11 @@ cout<<"Hey"<<endl;
 Constructors can also take parameters (just like regular functions), which can be useful for setting initial values for attributes.
 
 **Type of constructors**
-default,parameterized,copy constructor
+
+**Default** it does not contain any arguments and is invoked or called at the time of object creation. We can either specify the default constructor or it will be automatically called at the time of object creation.  
+**Parameterized** A constructor that takes parameters to initialize the object with specific values.
+Allows you to initialize the object's data members at the time of creation.  
+**Copy Constructor** A copy constructor in C++ is a special member function that is used to create a new object as a copy of an existing object of the same type. 
 
 Constructors can also be defined outside the class--using scope resolution operator ::
 
@@ -89,7 +93,7 @@ int main() {
 It is complement of destructor.It automatically gets called when object of a class is destroyed.It deallocates the memory which was previously allocated to thr object.
 It has same name as od class but preceded by ~.
 
-# scope resolution operator ::
+# Scope resolution operator ::
 -used for namespace  
 -defining a function outside the class  
 -to access a global variable when there is local variable with same name
@@ -98,9 +102,9 @@ It has same name as od class but preceded by ~.
 
 # Access Specifiers
 define how members(method and attributes)of a class can be accessed  
-**public** - members are accessible from outside the class  
-**private** - members cannot be accessed (or viewed) from outside the class  
-**protected** - members cannot be accessed from outside the class, however, they can be accessed in inherited classes  
+**Public** - members are accessible from outside the class  
+**Private** - members cannot be accessed (or viewed) from outside the class  
+**Protected** - members cannot be accessed from outside the class, however, they can be accessed in inherited classes  
 
 
 **By default, all members of a class are private if you don't specify an access specifier**
@@ -122,7 +126,7 @@ struct Person {
 ```
 
 
-**Difference between struct and class?**
+**Difference between struct and class?**  
 By default members of a class are private,that of struct are public.
 
 # Features of OOPS
@@ -165,12 +169,12 @@ Encapsulation can also be defined in two different ways:
 getter and setter are used to read and modify private member of a class.  
 
 
-# inheritance
+# Inheritance
 is to inherit methods and attributes form one class to other
 It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.
 
-**base/parent class**-from which the child class is inherited
-**derived/child class**-class which is inherited from other class
+**Base/parent class**-from which the child class is inherited
+**Derived/child class**-class which is inherited from other class
 
 ```#include <iostream>
 #include <string>
@@ -202,7 +206,7 @@ int main() {
 ```
 **Type of inheritance-single,multiple,multilevel,hybrid**  
 
-**single** ek parent se ek base class inherit ki ho
+**Single** ek parent se ek base class inherit ki ho
 
 **Multilevel** A class can also be derived from one class, which is already derived from another class.
 
@@ -228,9 +232,9 @@ int main() {
   return 0;
 }
 ```
-**using public for inheritance means all the public members of the base class will become public members of the derived class.**
+**Using public for inheritance means all the public members of the base class will become public members of the derived class.**
 
-**multiple** a class can also be derived from more than one class using comma
+**Multiple** a class can also be derived from more than one class using comma
 
 ```class vehicle{//first base class
 public:
@@ -259,7 +263,7 @@ int main() {
 ```
 
 
-# diamond problem
+# Diamond problem
 It occurs when a class inherits from two or more classes that have a common ancestor. This common ancestor can lead to ambiguity because grandchild class will inherit menber of grandparent class from both parents.leads to duplication of data.
 
 solution to this is=
@@ -306,14 +310,14 @@ A real-life example of polymorphism is a person who at the same time can have di
 
 **Polymorphism refers to the process by which some code, data, method, or object behaves differently under different circumstances or contexts**
 
-**Compile time polymorphism**
+**Compile time polymorphism**, also known as Static Polymorphism, refers to the type of Polymorphism that happens at compile time. What it means is that the compiler decides what shape or value has to be taken by the entity in the picture.
 (This type of polymorphism is achieved by function overloading or operator overloading.)
 
-**function overloading**=When there are multiple functions with the same name but different parameters, then the functions are said to be overloaded, hence this is known as Function Overloading. Functions can be overloaded by changing the number of arguments or/and changing the type of arguments. 
+**Function overloading**=When there are multiple functions with the same name but different parameters, then the functions are said to be overloaded, hence this is known as Function Overloading. Functions can be overloaded by changing the number of arguments or/and changing the type of arguments. 
 
-**operator overloading**=C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading. For example, we can make use of the addition operator (+) for string class to concatenate two strings. We know that the task of this operator is to add two operands. So a single operator ‘+’, when placed between integer operands, adds them and when placed between string operands, concatenates them. 
+**Operator overloading**=C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading. For example, we can make use of the addition operator (+) for string class to concatenate two strings. We know that the task of this operator is to add two operands. So a single operator ‘+’, when placed between integer operands, adds them and when placed between string operands, concatenates them. 
 
-Compile time polymorphism, also known as Static Polymorphism, refers to the type of Polymorphism that happens at compile time. What it means is that the compiler decides what shape or value has to be taken by the entity in the picture.
+
 
 ```#include <iostream>
 
@@ -350,8 +354,8 @@ The compiler looks at the method signature and decides which method to invoke fo
 **Run time polymorphism**=Runtime polymorphism, also known as Dynamic Polymorphism, refers to the type of Polymorphism that happens at the run time.This type of polymorphism is achieved by virtual functions and Function Overriding.
 In runtime polymorphism, the compiler resolves the object at run time and then it decides which function call should be associated with that object.
 
-**function overriding**=takes place when your derived class and base class both contain a function having the same name. Along with the same name, both the functions should have the same number of arguments as well as the same return type.For function overriding, inheritance is a must. It can only happen in a derived class.
-//runtime ke wqt hi pta lgtahai ki base class ka function call hoga ya derived class ka isloye isko run time polymorphism bolte
+**Function overriding**=takes place when your derived class and base class both contain a function having the same name. Along with the same name, both the functions should have the same number of arguments as well as the same return type.For function overriding, inheritance is a must. It can only happen in a derived class.
+//runtime ke wqt hi pta lgta hai ki base class ka function call hoga ya derived class ka isloye isko run time polymorphism bolte
 
 
 ```#include <iostream>
@@ -418,7 +422,7 @@ int main()
 ```
 
 
-Virtual Functions=A virtual function is a form of a member function declared within a base class and redefined by a derived class. The keyword virtual is used to create a virtual function, preceding the function's declaration in the base class.
+**Virtual Functions** A virtual function is a form of a member function declared within a base class and redefined by a derived class. The keyword virtual is used to create a virtual function, preceding the function's declaration in the base class.
 
 
 when we use the same function name both in base and derived class the function in base class is declared as virtual 
@@ -428,7 +432,7 @@ Pure-virtual Functions with no defination.Starts with virtual keyword and end wi
 
 
 # Friend Function
-function which is present outside the class but it can access provate and protected members of the class
+A friend function has access to all private and protected members of the class for which it is a friend.Function which is present outside the class but it can access private and protected members of the class
 
 # Abstract Class
 A class which has at least one pure virtual function.We can't make object of the abstract class.We can access it's memeber function using pointer or reference variable.
@@ -460,15 +464,18 @@ class className:Interfacename{
 
 
 
-# exception handling
+# Exception handling
 used to catch errors-like syntax errors
 three keywords=try,throw,catch
 
-```try{//detects error
-throw exception;//if exception is detected it is thrown by throe keyword
+```try{
+//detects error
+throw exception;//A program statement that you want to monitor for exceptions are
+contained in a try block.If exception is detected it is thrown by throw keyword
 }
 
-catch{//catches and handles exception
+catch{
+//catches and handles exception
 
 }
 
@@ -476,7 +483,7 @@ cout<<"end";//final statement i.e executed irrespective of try catch
 ```
 
 
-# imp que
+# Imp que
 ```class A {
     A() {
         // Constructor code for class A
@@ -509,8 +516,6 @@ order of destructors getting called
 -A
 ```
 
-item *ptr=new item[10];
-creates memory space for an array of 10 items
 
 
 # Types of variables
@@ -530,15 +535,12 @@ int &y=x;
 y++ krne se x ki value increase hogi kyonki y now reprresents x
 
 
-**Dynamic Memory Allocation**
-The mechanism by which storage/memory/cells can be allocated to variables during the run time is called Dynamic Memory Allocation.It allocates the memory during the run time which enables us to use as much storage as we want, without worrying about any wastage.
 
-**Final Keyword**
-can be applied to class,methods and variables.
-Final class=A final class is a class that can not be subclassed.It prevents other classes from extending it and inheriting its behaviour.
-A final method=can not be overridden
-A final variable=can not be reassigned after its initial assignment
 
-**static variable/data member** static variables maintain their value until the end of the program. It is initialized just once 
-// Declare a static variable.
-    static int temp = 0;
+# Final Keyword
+It can be applied to class,methods and variables.  
+**Final class** A final class is a class that can not be subclassed.It prevents other classes from extending it and inheriting its behaviour.  
+**A final method** can not be overridden  
+**A final variable** can not be reassigned after its initial assignment
+
+
