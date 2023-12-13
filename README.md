@@ -22,9 +22,11 @@ type function-name (arguments);
 # Inline functions
 inline functions are basically the small functions.function is expanded in line when it is invoked.function call is replaced by function body
 
-inline function_type function name(arguments){
+```
+inline function_type function name(arguments){  
 return a*a*a;
 }
+```
 
 # Default arguments
 assigns a defualt value to the function parameter which does not have a matching argument
