@@ -432,8 +432,8 @@ int main()
 
 
 when we use the same function name both in base and derived class the function in base class is declared as virtual 
-virtual function is accessed by a pointer to the base class
-Pure-virtual Functions with no defination.Starts with virtual keyword and end with =0.
+virtual function is accessed by a pointer to the base class  
+Pure-virtual Functions virtual function with no defination.Starts with virtual keyword and end with =0.
 
 
 
