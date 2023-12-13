@@ -94,7 +94,9 @@ int main() {
 
 # Destructor
 It is complement of destructor.It automatically gets called when object of a class is destroyed.It deallocates the memory which was previously allocated to thr object.
-It has same name as od class but preceded by ~.
+It has same name as od class but preceded by ~.  
+It is not possible to define more than one destructor. The destructor is only one way to destroy the object created by the constructor. Hence destructor can-not be overloaded.  
+Destructor neither requires any argument nor returns any value.
 
 # Scope resolution operator ::
 -used for namespace  
