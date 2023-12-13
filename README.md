@@ -474,7 +474,8 @@ class className:Interfacename{
 used to catch errors-like syntax errors
 three keywords=try,throw,catch
 
-```try{
+```
+try{
 //detects error
 throw exception;//A program statement that you want to monitor for exceptions are
 contained in a try block.If exception is detected it is thrown by throw keyword
