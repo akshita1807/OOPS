@@ -274,7 +274,8 @@ It occurs when a class inherits from two or more classes that have a common ance
 solution to this is=
 make both parent class as virtual class .it will make ensure that content of grandparent class is present only once in grandchild
 
-```class A {
+```
+class A {
 public:
     virtual void method() {
         cout << "A method" << endl;
