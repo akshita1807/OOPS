@@ -20,7 +20,8 @@ function prototyping gives the compiler the details about the functions such as 
 type function-name (arguments);
 
 # Inline functions
-inline functions are basically the small functions.function is expanded in line when it is invoked.function call is replaced by function body
+inline functions are basically the small functions.function is expanded in line when it is invoked.function call is replaced by function body.
+An inline function may increase efficiency if it is small.  
 
 ```
 inline function_type function name(arguments){  
