@@ -181,7 +181,8 @@ It is useful for code reusability: reuse attributes and methods of an existing c
 **Base/parent class**-from which the child class is inherited
 **Derived/child class**-class which is inherited from other class
 
-```#include <iostream>
+```
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -215,7 +216,8 @@ int main() {
 
 **Multilevel** A class can also be derived from one class, which is already derived from another class.
 
-```// Base class (parent)
+```
+// Base class (parent)
 class MyClass {
   public:
     void myFunction() {
@@ -241,7 +243,8 @@ int main() {
 
 **Multiple** a class can also be derived from more than one class using comma
 
-```class vehicle{//first base class
+```
+class vehicle{//first base class
 public:
 void myfun(){
 cout<<"Prent class"<<endl;
